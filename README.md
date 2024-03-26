@@ -39,7 +39,7 @@ Chequear que el log del kernel registre que el driver se cargo correctamente
 
 ### Paso 4: Desregistrar nuestro modulo de kernel recientemente creado
 ```bash
-$ sudo rmmod miModulo
+$ sudo rmmod <nombre_modulo>
 ```
 
 ### Paso 5: Verificación desregistrado del modulo
@@ -47,7 +47,7 @@ $ sudo rmmod miModulo
 $ dmesg
 ```
 
-Chequear que el log del kernel registre que el driver se cargo correctamente
+Chequear que el log del kernel registre que el driver se descargo correctamente
 
 ### Paso 6: Limpieza del directorio de trabajo
 ```bash
@@ -67,17 +67,17 @@ $ mknod /dev/chardevice c <mayor_number> <minor_number>
 
 ### Otorgar permisos de lectura y escritura
 ```bash
-$ chmod 777 /dev/chardevice
+$ chmod 777 /dev/<device_name>
 ```
 
 ### Escribir en el dispositivo.
 ```bash
- $ echo "texto de prueba" > /dev/chardevice
+ $ echo "texto de prueba" > /dev/<device_name>
 ```
 
 ### Leer el dispositivo
 ```bash
- $ cat /dev/chardevice
+ $ cat /dev/<device_name>
 ```
 
 
