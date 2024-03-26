@@ -80,4 +80,8 @@ $ chmod 777 /dev/<device_name>
  $ cat /dev/<device_name>
 ```
 
+### Cuando se termine de usar el device, borrar el nodo 
+```bash
+ $ sudo rm /dev/<device_name>
+```
 
